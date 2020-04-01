@@ -1,0 +1,15 @@
+{
+  "background_color": "white",
+  "description": "ஹயாத் காய்கனி அங்காடி Order Online !",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "https://cdn3.iconfinder.com/data/icons/random-4/96/food-vegetables-groceries-cook-shopping-bag-512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "ஹயாத் காய்கனி அங்காடி",
+  "short_name": "Hayath Veg",
+  "start_url": "https://script.google.com/macros/s/AKfycbyfWq5dLmoWHdGNlaol1pzpTBYiw-UOgetxozwOx9r-c9Gp3MA/exec"
+}
