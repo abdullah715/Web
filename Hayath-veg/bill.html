@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
    
     <link rel="icon" type="image/png" href="https://cdn3.iconfinder.com/data/icons/random-4/96/food-vegetables-groceries-cook-shopping-bag-512.png">
-    <link rel="manifest" href="/Web/Hayath-veg/manifest.webmanifest">
+    <link rel="manifest" href="/Web/Hayath-veg/bill-hayath.webmanifest">
     <link rel="manifest" href="/Web/Hayath-veg/service-worker.js">
     
     
@@ -53,10 +53,27 @@
   
     </div>
     <script>
+      
+      
       function pageloadingtime()
         {
         document.getElementsByClassName('loader')[0].style.zIndex = -1
         }
+      
+     
+          
+          const url = window.location.href;
+          const param = url.split("?");
+
+          if(param[1]){
+              var f = document.getElementsByTagName('iframe')[0]
+              let new_src = f.getAttribute("src");
+              new_src = new_src +"?"+param[1];
+              f.setAttribute("src",new_src);
+              f.src = f.src;
+          }
+
+
     </script>
     
    <iframe onload="pageloadingtime();" src="https://script.google.com/macros/s/AKfycbz85puemE32IQRWLqtyJt5Mv5kNDU3-5l8BDerbB5RcYrynlbo/exec" frameborder="0" style="overflow:hidden;height:100%;width:100%"></iframe>
