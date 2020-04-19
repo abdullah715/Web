@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+   
+    <link rel="icon" type="image/png" href="https://cdn3.iconfinder.com/data/icons/random-4/96/food-vegetables-groceries-cook-shopping-bag-512.png">
+    <link rel="manifest" href="/Web/Hayath-veg/bill-hayath.webmanifest">
+    <link rel="manifest" href="/Web/Hayath-veg/service-worker.js">
+    
+    
+    <title>ஹயாத் காய்கனி அங்காட</title>
+    
+    <script>
+       
+  if ('serviceWorker' in navigator) {
+    console.log("Will the service worker register?");
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(reg){
+        console.log("Yes, it did.");
+      }).catch(function(err) {
+        console.log("No it didn't. This happened: ", err)
+      });
+  }
+    
+    </script>
+    <script src="/Web/Hayath-veg/install.js"></script>
+    
+    <style>
+      .loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid red; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+    
+  </head>
+  <body style="height:100vh;margin: 0;">
+ 
+    <div class="loader" style="width: 150px;height: 150px;position: absolute;top: 32%;left: 32%" role="status">
+  
+    </div>
+    <script>
+      
+      
+      function pageloadingtime()
+        {
+        document.getElementsByClassName('loader')[0].style.zIndex = -1
+        }
+      
+     
+          
+        
+    </script>
+    
+   <iframe onload="pageloadingtime();" src="https://script.google.com/macros/s/AKfycbzYxcv34CoVqblogQTY_RaiHYneCmVSf9Ro1PEhIkCHRzOytqUv/exec" frameborder="0" style="overflow:hidden;height:100%;width:100%"></iframe>
+
+    <script>
+        const url = window.location.href;
+          const param = url.split("?");
+
+          if(param[1]){
+              var f = document.getElementsByTagName('iframe')[0]
+              let new_src = f.getAttribute("src");
+              new_src = new_src +"?"+param[1];
+              f.setAttribute("src",new_src);
+              f.src = f.src;
+          }
+
+
+    </script>
+      
+    </body>
+  
+</html>
